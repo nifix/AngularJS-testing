@@ -2,7 +2,7 @@
 import { HomeController } from './Home/HomeController.js';
 import 'angular';
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './scss/app.scss';
 
 // Define App
 let espaceAce = angular.module('espaceAce', []);

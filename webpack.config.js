@@ -11,8 +11,22 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader',
+                {
+                    loader: 'postcss-loader',
+                    options: {
+                        plugins: function () {
+                            return [
+                                require('autoprefixer')
+                            ];
+                        }
+                    }
+                },
+                {
+                    loader: 'sass-loader',
+                }
+                ]
             },
             {
                 test: /\.js$/,
@@ -23,6 +37,7 @@ module.exports = {
                         presets: ['@babel/preset-env'],
                     }
                 }
-            },
-        ]}
+            }
+        ]
+    }
 }
