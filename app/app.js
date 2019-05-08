@@ -5,7 +5,7 @@ import 'bootstrap';
 import './scss/app.scss';
 
 // Define App
-let espaceAce = angular.module('espaceAce', []);
+const espaceAce = angular.module('espaceAce', []);
 
 // Controllers
 espaceAce.controller('HomeCtrl', ['$scope', HomeController]);
