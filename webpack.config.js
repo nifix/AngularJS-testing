@@ -2,8 +2,9 @@ const path = require('path');
 
 module.exports = {
 
-    mode: "production",
+    mode: "development",
     entry: "./app/app.js",
+    devtool: 'eval-source-map',
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "ace.bundle.js",
