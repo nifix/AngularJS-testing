@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
 
-    mode: "development",
+    mode: "production",
     entry: "./app/app.js",
     devtool: 'eval-source-map',
     output: {
