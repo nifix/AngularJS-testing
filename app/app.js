@@ -1,12 +1,10 @@
 /*
  * Imports 
 */
-
-import 'angular';
-import 'angular-route';
 import 'bootstrap';
 import './app.scss';
 
+import { angular } from  'angular';
 import { HomeCtrl } from './controllers/home/HomeCtrl.js';
 
 
