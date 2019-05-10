@@ -21,7 +21,7 @@
         function init(){
             $routeProvider
             .when('/', {
-                templateUrl: 'app/controllers/home/home.tpl.html',
+                templateUrl: 'app/src/sections/home/home.tpl.html',
                 controller: 'HomeCtrl'
             })           
         }

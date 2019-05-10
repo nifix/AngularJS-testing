@@ -4,13 +4,14 @@ import 'angular-route';
 
 // Bootstrap
 import 'bootstrap';
-import './app.scss';
+import './src/assets/app.scss';
 
 // Routes Config
 import './app.routes.js';
 
 // Controllers
-import './controllers/home/home.ctrl.js';
+import './src/sections/home/home.ctrl.js';
+
 
 'use strict';
 const app = angular.module('app', 
