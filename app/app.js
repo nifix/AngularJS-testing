@@ -1,43 +1,21 @@
-/*
- * Imports 
-*/
+// Angular
+import angular from 'angular';
+import 'angular-route';
+
+// Bootstrap
 import 'bootstrap';
 import './app.scss';
 
-import { angular } from  'angular';
-import { HomeCtrl } from './controllers/home/HomeCtrl.js';
+// Routes Config
+import './app.routes.js';
 
+// Controllers
+import './controllers/home/home.ctrl.js';
 
-/*
- * App definition 
-*/
-
-const espaceAce = angular.module('espaceAce', [
-    require('angular-route')
+'use strict';
+const app = angular.module('app', 
+[
+    'ngRoute',
+    'app.core',
+    'app.routes'
 ]);
-
-/*
- * Controllers 
-*/
-
-espaceAce.controller('HomeCtrl', ['$scope', HomeCtrl]);
-
-/*
- * Routing settings 
-*/
-
-espaceAce.config([
-    "$routeProvider",
-    function($routeProvider) {
-        $routeProvider
-        .when('/', {
-            templateUrl: 'app/partials/homePartial.htm',
-            controller: 'HomeCtrl'
-        })
-    }
-]);
-
-
-// Services
-
-// Directives

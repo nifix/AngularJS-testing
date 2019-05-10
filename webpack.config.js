@@ -1,13 +1,9 @@
 const path = require('path');
 
-
 module.exports = {
 
     mode: 'production',
     entry: './app/app.js',
-    entry: {
-        app: './app/app.js'
-    },
     devtool: 'eval-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
