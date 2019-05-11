@@ -11,6 +11,7 @@ import './app.routes.js';
 
 // Controllers
 import './src/sections/home/home.ctrl.js';
+import './src/sections/customers/customers.ctrl.js';
 
 // Directives
 import './src/directives/home/home.drct.js';
@@ -22,5 +23,6 @@ const app = angular.module('app',
     'ngRoute',
     'app.core',
     'app.routes',
-    'HomeDrct'
+    'HomeDrct',
+    'app.customers'
 ]);
