@@ -25,8 +25,8 @@
                 controller: 'HomeCtrl'
             })
             .when('/customers-list', {
-                templateUrl: 'app/src/sections/customers/customers.tpl.html',
-                controller: 'CustomersCtrl'
+                templateUrl: 'app/src/sections/customers/customerslist.tpl.html',
+                controller: 'CustomersListCtrl'
             })           
         }
 
