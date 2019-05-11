@@ -2,9 +2,9 @@
     <div class="card-header">
     Dossiers
     </div>
-    <div class="card-body">
-        <div class="row">
-            <table class="table" ng-controller="CustomersListCtrl">
+    <div class="card-body" ng-controller="CustomersListCtrl">
+        <div class="row" ng-cloak>
+            <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Code dossier</th>
@@ -14,15 +14,12 @@
                     </tr>
                 </thead>
                 <tbody>
-
-
                     <tr ng-repeat="customer in customers">
                         <th scope="row">{{ customer.code_customer }}</th>
                         <td>{{ customer.name_customer }}</td>
                         <td>{{ customer.resp_customer }}</td>
                         <td>Action</td>
                     </tr>
-
                 </tbody>
             </table>
         </div>

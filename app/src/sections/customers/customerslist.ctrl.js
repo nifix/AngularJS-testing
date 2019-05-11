@@ -23,6 +23,7 @@
             let ajax = $resource('api/api_get_customers.php');
             ajax.query().$promise.then(function(data){
                 $scope.customers = data;
+                $scope.loadingCustomersData = true;
             });
         }
 
