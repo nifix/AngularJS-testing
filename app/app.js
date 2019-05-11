@@ -12,11 +12,15 @@ import './app.routes.js';
 // Controllers
 import './src/sections/home/home.ctrl.js';
 
+// Directives
+import './src/directives/home/home.drct.js';
+
 
 'use strict';
 const app = angular.module('app', 
 [
     'ngRoute',
     'app.core',
-    'app.routes'
+    'app.routes',
+    'HomeDrct'
 ]);
