@@ -18,6 +18,7 @@
         
         init();
 
+
         function init() {
 
             let ajax = $resource('api/api_get_customers.php');

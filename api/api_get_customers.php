@@ -37,7 +37,6 @@ class ExportData {
         $this->dblink = new PDO($formatted_string, $this->login, $this->pwd);
      }
 
-
     /*
      * Casually retrieve customers from 
      * DB.
