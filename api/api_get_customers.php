@@ -24,7 +24,7 @@ class ExportData {
      * 
      */
 
-    private function __construct() {
+    function __construct() {
         $this->do_connect();
     }
 
@@ -63,8 +63,7 @@ class ExportData {
     /*
      * Unset the link
      */
-    private function __destruct() {
-        $this->dblink->close();
+    function __destruct() {
         unset($this->dblink);
     }
 }
