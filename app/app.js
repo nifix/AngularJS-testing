@@ -26,7 +26,8 @@ const app = angular.module('app',
     
     'app.core',
     'app.routes',
-    'HomeDrct',
 
+    'HomeDrct',
+    
     'customers.list'
 ]);
