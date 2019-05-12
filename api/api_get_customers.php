@@ -20,13 +20,13 @@ class ExportData {
     private $data;
 
     /*
-     * 
+     * Launches a connection when created.
      * 
      */
 
-    private function __constructor() {
+    private function __construct() {
+        $this->do_connect();
     }
-
 
     /*
      * Connects to the DB if the link isn't set.
@@ -43,8 +43,6 @@ class ExportData {
      */
 
     private function get_customers_list() {
-        if (empty($this->dblink)) $this->do_connect();
-
         $tmp = $this->dblink->query('SELECT * FROM customers');
         $this->data = json_encode($tmp->fetchAll(PDO::FETCH_ASSOC));
     }
@@ -54,7 +52,7 @@ class ExportData {
      *  only retrieve $this->data
      */
 
-    public function getData() {
+    public function getCustomers() {
         if (empty($this->data)) { 
             $this->get_customers_list(); 
             return $this->data;
@@ -65,11 +63,11 @@ class ExportData {
     /*
      * Unset the link
      */
-    private function __deconstructor() {
+    private function __destruct() {
         $this->dblink->close();
         unset($this->dblink);
     }
 }
 
 $export_data = new ExportData();
-echo $export_data->getData();
+echo $export_data->getCustomers();
